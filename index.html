@@ -104,8 +104,24 @@
     //   minusThree.count() // returns null
     //   minusThree.count() // returns null
     class CountDown {
-
+      constructor(num) {
+        this.currentNum = num
+      }
+      count() {
+        if (this.currentNum >= 1) {
+          const oldValue = this.currentNum
+          this.currentNum--
+          return `${oldValue}!`
+        } else if (this.currentNum === 0) {
+          this.currentNum--
+          return "Liftoff!"
+        } else {
+          return null
+        }
+      }
     }
+
+
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
