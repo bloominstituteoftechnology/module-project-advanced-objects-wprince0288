@@ -30,9 +30,9 @@
         this.age = 0
       }
       ageGracefully() {
-       if (this.age < 12) {
-        this.age++
-       }
+        if (this.age < 12) {
+          this.age++
+        }
       }
     }
 
@@ -55,9 +55,9 @@
         return this.altitude
       }
       down(feet) {
-        if(this.altitude >= feet) {
-        this.altitude -= feet
-        return this.altitude
+        if (this.altitude >= feet) {
+          this.altitude -= feet
+          return this.altitude
         }
         this.altitude = 0
         return "CRASH!"
@@ -71,7 +71,22 @@
     // 🧠 The methods work as one might expect, changing the value of `isOn` to the appropriate Boolean.
     // 🧠 The methods also return one of these two strings: "You turned the bulb ON", or "You turned the bulb OFF".
     class Bulb {
-
+      isOn = false
+      turnOn() {
+        this.isOn = true
+        return "You turned the bulb ON"
+      }
+      turnOff() {
+        this.isOn = false
+        return "You turned the bulb OFF"
+      }
+      toggle() {
+        this.isOn = !this.isOn
+        if (this.isOn) {
+          return "You turned the bulb ON"
+        }
+        return "You turned the bulb OFF"
+      }
     }
 
     // 👉 CHALLENGE 4
